@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      main {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: var(--hero-bg, #f7f7f2);
+        padding: 2rem;
+        text-align: center;
+        font-family: var(--font-sans, system-ui, -apple-system, "Segoe UI",
+            sans-serif);
+        color: var(--hero-text-main, #3b3b3b);
+      }
+      .card {
+        background: #ffffff;
+        border: 1px solid var(--hero-border, #cecece);
+        border-radius: 12px;
+        padding: 2rem 2.5rem;
+        max-width: 520px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      }
+      h1 {
+        margin: 0 0 0.75rem;
+        font-family: var(--font-serif-display, "Times New Roman", serif);
+        color: var(--hero-green, #6e7b69);
+        letter-spacing: 0.05em;
+      }
+      p {
+        margin: 0;
+        color: var(--hero-text-muted, #454545);
+      }
+      a {
+        display: inline-block;
+        margin-top: 1.25rem;
+        color: var(--hero-green, #6e7b69);
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <h1>Thank You</h1>
+        <p>Your tribute has been received and will be cherished.</p>
+        <a href="/">Return to Tribute</a>
+      </div>
+    </main>
+  </body>
+</html>
+
+
