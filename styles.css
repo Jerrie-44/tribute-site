@@ -13,6 +13,20 @@
     sans-serif;
 }
 
+.background-texture {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.figma.com/api/mcp/asset/2a6f3e00-7091-4f3d-9ef2-3c5a098b39e9");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+  z-index: -1; /* Ensure it stays behind all content */
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -27,10 +41,11 @@ body {
   justify-content: center;
   background-color: var(--hero-bg);
   /* Replace with your own decorative background images if desired */
-  background-image: url("texture-left.png"), url("texture-right.png");
+  background-image: url("https://www.figma.com/api/mcp/asset/eab0d863-0959-4f79-b41b-be62d970c8d4"), url("https://www.figma.com/api/mcp/asset/180750fb-dbb3-4bdd-8f5c-268e530c3276");
   background-repeat: no-repeat, no-repeat;
   background-position: top left, bottom right;
   background-size: 280px auto, 280px auto;
+  position: relative; /* Added for absolute positioning of branches */
 }
 
 .hero-inner {
@@ -51,6 +66,37 @@ body {
   font-size: 1.1rem;
   color: var(--hero-text-main);
   margin: 0;
+}
+
+.hero-branch-left {
+  position: absolute;
+  left: 483.65px;
+  top: 186.01px;
+  width: 156.627px;
+  height: 143.363px;
+  transform: rotate(339.605deg);
+  z-index: 1; /* Ensure branches are above background but below content */
+}
+
+.hero-branch-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-branch-right {
+  position: absolute;
+  left: 778px;
+  top: 315px;
+  width: 150.444px;
+  height: 39.421px;
+  z-index: 1;
+}
+
+.hero-branch-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .hero-portrait {
@@ -172,6 +218,10 @@ textarea::placeholder {
 @media (max-width: 600px) {
   .hero {
     padding-top: 3rem;
+  }
+
+  .hero-branch-left, .hero-branch-right {
+    display: none; /* Hide branches on small screens if they cause layout issues */
   }
 
   .hero-dates {
